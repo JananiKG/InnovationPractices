@@ -10,7 +10,7 @@ def match_target_amplitude(aChunk, target_dBFS):
     return aChunk.apply_gain(change_in_dBFS)
 
 # Load your audio.
-song = AudioSegment.from_wav(r"C:\Users\asus\OneDrive\Desktop\JANANI 2\PSG CSE STUFF\SEM 6\InnovationPractices\Audios\Day 1\Audio_File_3.wav")
+song = AudioSegment.from_wav(r"C:\Users\asus\OneDrive\Desktop\JANANI 2\PSG CSE STUFF\SEM 6\InnovationPractices\Audios\Day 1\Audio_File_7.wav")
 
 # Split track where the silence is 2 seconds or more and get chunks using 
 # the imported function.
@@ -37,7 +37,7 @@ for i, chunk in enumerate(chunks):
 
     # Export the audio chunk with new bitrate.
     print("Exporting chunk{0}.wav.".format(i))
-    newLocName = '.\\Split_audios\\Day_1\\Audio_File_3\\chunk_' + str(i) + '.wav'
+    newLocName = '.\\Split_audios\\Day_1\\Audio_File_7\\chunk_' + str(i) + '.wav'
     normalized_chunk.export(
         newLocName,
         bitrate = "192k",
